@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose");
 
 const projectSchema = new mongoose.Schema(
@@ -31,25 +32,10 @@ const projectSchema = new mongoose.Schema(
       },
     ],
 
-    maxMembers: {
-      type: Number,
-      default: 5,
-    },
-
-    projectImage: {
-      type: String,
-      default: "",
-    },
-
     status: {
       type: String,
       enum: ["open", "in-progress", "completed"],
       default: "open",
-    },
-
-    isRemote: {
-      type: Boolean,
-      default: true,
     },
   },
   {
